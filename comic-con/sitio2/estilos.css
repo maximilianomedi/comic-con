@@ -1,0 +1,75 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.resu1 {
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.resu2 {}
+
+nav {
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+footer{
+  
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #313030be;
+    
+}
+.anotar {}
+
+.color {}
+
+body {
+    background-image: url(img/fondo_comics.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.btn-3 {
+    color: white;
+
+    box-shadow: 0 0 0 0 rgba(143, 64, 248, 0.5), 0 0 0 0 rgba(39, 200, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    overflow: hidden;
+}
+
+.btn {
+    text-decoration: none;
+    
+    font-size: 1.5rem;
+    position: relative;
+
+}
+
+.btn-3::after {
+    content: "";
+    width: 165px;
+    height: 140px;
+    position: absolute;
+    top: -46px;
+    left: -20px;
+    background: #fbff13;
+    background-image: linear-gradient(-225deg, rgb(150, 170, 35) 0%, #7a6610 29%, #FF1361 67%, #FFF800 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn-3:hover {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px 0 rgba(253, 249, 16, 0.5), -10px 10px 25px 0 rgba(255, 30, 0, 0.794);
+}
+
+.btn-3:hover::after {
+    transform: rotate(150deg);
+}

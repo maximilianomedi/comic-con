@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body " data-bs-theme="dark">
+        <div class="container">
+
+            <a class="navbar-brand">
+                <img src="img/marca.png" href="../index.html" class="d-inline-block img-fluid align-text-top">
+
+            </a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse mt-3" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="../sitio2/index.html">COSPLAY</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../sitio3/index.html">INVITADOS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">TICKETS</a>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <main>
+        <div class="container">
+            <div class="row justify-content-around">
+
+                <div class="col-lg-4 col-md-4  col-sm-8 p-3">
+                    <img src="img/venta_1.png" class="img-fluid" alt="">
+                    <a href="#" class="btn btn-3" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+
+                                    <div class="col-lg-8">
+
+                                        <section id='tarjeta' class="tarjeta">
+
+                                            <div class="tarjeta-frente">
+                                                <div class="logoBanco" id="logoMarca">
+                                                </div>
+                                                <img src="img/chip.png" alt="chip" class="chip img-fluid">
+                                                <div class="datos">
+                                                    <div class="grupo" id="numero">
+                                                        <p id="numeroTarjeta">#### #### #### ####</p>
+                                                    </div>
+                                                    <div class="flexbox">
+                                                        <div class="grupo" id="nombre">
+                                                            <p class="label">Nombre:</p>
+                                                            <p class="nombre">Juan Pérez</p>
+                                                        </div>
+                                                        <div class="grupo" id="vto">
+                                                            <p class="label">Vencimiento:</p>
+                                                            <p class="vto"><span class="mm">MM</span>/<span
+                                                                    class="aa">AA</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tarjeta-dorso">
+                                                <div class="barraMagnetica"></div>
+                                                <section class="firmaCVV">
+                                                    <div class="firma">
+                                                        <p>Firma</p>
+                                                        <div id="firma">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cvv">
+                                                        <p>CVV</p>
+                                                        <div id="codigoV">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                </p>
+                                            </div>
+
+                                        </section>
+
+                                        <section class="boton">
+                                            <button class="abrirForm" id="btnAbrirForm">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </section>
+
+                                        <form action="" class="formulario" id="form">
+                                            <div class="grupo">
+                                                <label for="numTarj" class="form_label">Número de tarjeta:</label>
+                                                <input type="text" name="numTarj" id="numTarj" class="form_input"
+                                                    maxlength="19" autocomplete="off" />
+                                            </div>
+                                            <div class="grupo">
+                                                <label for="nombre" class="form_label">Nombre (como figura en la
+                                                    tarjeta):</label>
+                                                <input type="text" name="nombre" id="nombre" class="form_input"
+                                                    maxlength="19" placeholder="" />
+                                            </div>
+                                            <div class="flexbox-vencimiento">
+                                                <div class="grupo-vencimiento">
+                                                    <label for="vtoTarjeta" class="form_label">Vencimiento:</label>
+                                                    <div class="grupoVto">
+                                                        <div class="grupo-select">
+                                                            <select name="mes" id="vtoTarjeta">
+                                                                <option disabled selected>Mes</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <div class="grupo-select">
+                                                            <select name="anio" id="vtoAnio">
+                                                                <option disabled selected>Año</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grupo">
+                                                    <label for="cvv" class="form_label">Código de verificación:</label>
+                                                    <input type="text" name="cvv" id="cvv" class="form_input"
+                                                        maxlength="3" placeholder="CVV" />
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn_confirmar">CONFIRMAR</button>
+                                        </form>
+                                        <script src="codigo.js">
+
+                                        </script>
+
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-8 p-3">
+                    <img src="img/venta_2.png" class="img-fluid" alt="">
+                    <a href="#" class="btn btn-3" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+
+                                    <div class="col-lg-8">
+
+                                        <section id='tarjeta' class="tarjeta">
+
+                                            <div class="tarjeta-frente">
+                                                <div class="logoBanco" id="logoMarca">
+                                                </div>
+                                                <img src="img/chip.png" alt="chip" class="chip img-fluid">
+                                                <div class="datos">
+                                                    <div class="grupo" id="numero">
+                                                        <p id="numeroTarjeta">#### #### #### ####</p>
+                                                    </div>
+                                                    <div class="flexbox">
+                                                        <div class="grupo" id="nombre">
+                                                            <p class="label">Nombre:</p>
+                                                            <p class="nombre">Juan Pérez</p>
+                                                        </div>
+                                                        <div class="grupo" id="vto">
+                                                            <p class="label">Vencimiento:</p>
+                                                            <p class="vto"><span class="mm">MM</span>/<span
+                                                                    class="aa">AA</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tarjeta-dorso">
+                                                <div class="barraMagnetica"></div>
+                                                <section class="firmaCVV">
+                                                    <div class="firma">
+                                                        <p>Firma</p>
+                                                        <div id="firma">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cvv">
+                                                        <p>CVV</p>
+                                                        <div id="codigoV">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <p class="leyenda">Lorem ipsum dolor sit amet consectetur adipisicing
+                                                </p>
+                                            </div>
+
+                                        </section>
+
+                                        <section class="boton">
+                                            <button class="abrirForm" id="btnAbrirForm">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </section>
+
+                                        <form action="" class="formulario" id="form">
+                                            <div class="grupo">
+                                                <label for="numTarj" class="form_label">Número de tarjeta:</label>
+                                                <input type="text" name="numTarj" id="numTarj" class="form_input"
+                                                    maxlength="19" autocomplete="off" />
+                                            </div>
+                                            <div class="grupo">
+                                                <label for="nombre" class="form_label">Nombre (como figura en la
+                                                    tarjeta):</label>
+                                                <input type="text" name="nombre" id="nombre" class="form_input"
+                                                    maxlength="19" placeholder="" />
+                                            </div>
+                                            <div class="flexbox-vencimiento">
+                                                <div class="grupo-vencimiento">
+                                                    <label for="vtoTarjeta" class="form_label">Vencimiento:</label>
+                                                    <div class="grupoVto">
+                                                        <div class="grupo-select">
+                                                            <select name="mes" id="vtoTarjeta">
+                                                                <option disabled selected>Mes</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <div class="grupo-select">
+                                                            <select name="anio" id="vtoAnio">
+                                                                <option disabled selected>Año</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grupo">
+                                                    <label for="cvv" class="form_label">Código de verificación:</label>
+                                                    <input type="text" name="cvv" id="cvv" class="form_input"
+                                                        maxlength="3" placeholder="CVV" />
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn_confirmar">CONFIRMAR</button>
+                                        </form>
+                                        <script src="codigo.js">
+
+                                        </script>
+
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4  col-sm-8 p-3">
+
+                    <img src="img/venta_3.png" class="img-fluid" alt="">
+                    <a href="#" class="btn btn-3" data-bs-toggle="modal" data-bs-target="#exampleModal">COMPRAR</a>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+
+
+                                    <div class="col-lg-8">
+
+                                        <section id='tarjeta' class="tarjeta">
+
+                                            <div class="tarjeta-frente">
+                                                <div class="logoBanco" id="logoMarca">
+                                                </div>
+                                                <img src="img/chip.png" alt="chip" class="chip img-fluid">
+                                                <div class="datos">
+                                                    <div class="grupo" id="numero">
+                                                        <p id="numeroTarjeta">#### #### #### ####</p>
+                                                    </div>
+                                                    <div class="flexbox">
+                                                        <div class="grupo" id="nombre">
+                                                            <p class="label">Nombre:</p>
+                                                            <p class="nombre">Juan Pérez</p>
+                                                        </div>
+                                                        <div class="grupo" id="vto">
+                                                            <p class="label">Vencimiento:</p>
+                                                            <p class="vto"><span class="mm">MM</span>/<span
+                                                                    class="aa">AA</span></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="tarjeta-dorso">
+                                                <div class="barraMagnetica"></div>
+                                                <section class="firmaCVV">
+                                                    <div class="firma">
+                                                        <p>Firma</p>
+                                                        <div id="firma">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="cvv">
+                                                        <p>CVV</p>
+                                                        <div id="codigoV">
+                                                            <p></p>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                                <p class="leyenda">Lorem ipsum dolor sit amet consectetur
+                                                    adipisicing
+                                                </p>
+                                            </div>
+
+                                        </section>
+
+                                        <section class="boton">
+                                            <button class="abrirForm" id="btnAbrirForm">
+                                                <i class="fas fa-arrow-down"></i>
+                                            </button>
+                                        </section>
+
+                                        <form action="" class="formulario" id="form">
+                                            <div class="grupo">
+                                                <label for="numTarj" class="form_label">Número de tarjeta:</label>
+                                                <input type="text" name="numTarj" id="numTarj" class="form_input"
+                                                    maxlength="19" autocomplete="off" />
+                                            </div>
+                                            <div class="grupo">
+                                                <label for="nombre" class="form_label">Nombre (como figura en la
+                                                    tarjeta):</label>
+                                                <input type="text" name="nombre" id="nombre" class="form_input"
+                                                    maxlength="19" placeholder="" />
+                                            </div>
+                                            <div class="flexbox-vencimiento">
+                                                <div class="grupo-vencimiento">
+                                                    <label for="vtoTarjeta" class="form_label">Vencimiento:</label>
+                                                    <div class="grupoVto">
+                                                        <div class="grupo-select">
+                                                            <select name="mes" id="vtoTarjeta">
+                                                                <option disabled selected>Mes</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                        <div class="grupo-select">
+                                                            <select name="anio" id="vtoAnio">
+                                                                <option disabled selected>Año</option>
+                                                            </select>
+                                                            <i class="fas fa-angle-down"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="grupo">
+                                                    <label for="cvv" class="form_label">Código de
+                                                        verificación:</label>
+                                                    <input type="text" name="cvv" id="cvv" class="form_input"
+                                                        maxlength="3" placeholder="CVV" />
+                                                </div>
+                                            </div>
+                                            <button type="submit" class="btn_confirmar">CONFIRMAR</button>
+                                        </form>
+                                        <script src="codigo.js">
+
+                                        </script>
+
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </main>
+    <section>
+        <div class="container">
+            <div class="row justify-content-around">
+
+                <div class="col-lg-4 ">
+                    <img src="img/for_lado.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-4 ">
+                    <div class="card bg-warning shadow-0 mb-3 p-3">
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <button type="submit" class="btn btn-3">enviar</button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+    </section>
+    <footer>
+        <div class="container">
+            <div class="row justify-content-around">
+
+
+                <div class="col-lg-2 col-md-6 col-sm-3 text-center p-3">
+                    <a href="https://www.instagram.com/argcomiccon/?hl=es-la" target="_blank">
+                        <img src="img/instagram.png" class="img-fluid" alt="">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-3 text-center p-3">
+                    <img src="img/flash.png" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-3 text-center p-3">
+
+                    <a href="https://www.youtube.com/watch?v=msRTeRjEmhI" target="_blank">
+                        <img src="img/youtube.png" class="img-fluid" alt="">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
